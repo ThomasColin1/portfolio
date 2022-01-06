@@ -47,11 +47,11 @@ function Wrapper(){
 }
 
 function Java(){
-    return(<div class="java"><ImgJava /><Java1 /><Java2 /><Java3 /></div>)
+    return(<div class="java carte"><ImgJava /><JavaContent/></div>)
 }
 
 function ImgJava(){
-    return(<img src='/static/media/java.png' alt="Projets Java"/>)
+    return(<div class="imgBx"><img src='/static/media/java.png' alt="Projets Java"/></div>)
 }
 
 function Java1(){
@@ -66,15 +66,19 @@ function Java2(){
 }
 
 function Java3(){
-    return(<h4>En cours : un jeu de gestion dans un froid polaire</h4>)
+    return(<h4></h4>)
+}
+
+function JavaContent(){
+    return(<div class="contentBx"><Java1/><Java2/><Java3/></div>)
 }
 
 function Html(){
-    return(<div class='html'><ImgHtml /><Html1 /><Html2 /><Html3 /></div>)
+    return(<div class='html carte'><ImgHtml /><div class="contentBx"><Html1 /><Html2 /><Html3 /></div></div>)
 }
 
 function ImgHtml(){
-    return(<img src="/static/media/html.png" alt="Projets html, css et javascript"/>)
+    return(<div class="imgBx"><img src="/static/media/web.png" alt="Projets html, css et javascript"/></div>)
 }
 
 function Html1(){
@@ -90,11 +94,11 @@ function Html3(){
 }
 
 function Python(){
-    return(<div class='python'><ImgPy /><Py1 /><Py2 /><Py3 /></div>)
+    return(<div class='python carte'><ImgPy /><div class="contentBx"><Py1 /><Py2 /><Py3 /></div></div>)
 }
 
 function ImgPy(){
-    return(<img src="/static/media/djangopython.png" alt="Projets Django et Python"/>)
+    return(<div class="imgBx"><img src="/static/media/django.png" alt="Projets Django et Python"/></div>)
 }
 
 function Py1(){
@@ -110,11 +114,11 @@ function Py3(){
 }
 
 function CPP(){
-    return(<div class='cpp'><ImgCPP /><CPP1 /><CPP2 /><CPP3 /></div>)
+    return(<div class='cpp carte'><ImgCPP /><div class="contentBx"><CPP1 /><CPP2 /><CPP3 /></div></div>)
 }
 
 function ImgCPP(){
-    return(<img src="/static/media/cpp.png" alt="Projets C++"/>)
+    return(<div class="imgBx"><img src="/static/media/c.png" alt="Projets C++"/></div>)
 }
 
 function CPP1(){

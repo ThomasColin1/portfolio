@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script|Bitter|Cormorant+Garamond&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins;wght@200;300;400;500;600;700;800;900&display=swap");
 /*    SETUP     */
 /*    SETUP     */
 html {
@@ -94,9 +94,12 @@ body {
   width: 55%;
   margin: 0 auto;
 }
+#propos p {
+  font-size: 18px;
+}
 
 /*     PROJETS     */
-.wrapper {
+/*.wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -120,12 +123,15 @@ body {
 
 .projets h2 {
   text-align: center;
-}
+}*/
 
 /*              DIVERS               */
 
 .divers {
+  margin: auto;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #soundcloud {
@@ -136,6 +142,84 @@ body {
   margin-bottom: 30px;
 }
 
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+/****************** effet cartes divers ********************/
+.carte2 {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background: #fff;
+  transform-style: perserve-3d;
+  transform: perspective(1000px);
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+  transition: 1s;
+}
+.carte2:hover {
+  transform: translateX(50%);
+}
+.carte2 .img1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  background: #000;
+  transition: 1s;
+}
+.carte2:hover .img1 {
+  transform: rotateY(-180deg);
+}
+.carte2 .img1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.carte2 .img1 img:nth-child(2) {
+  transform: rotateY(-180deg);
+}
+
+.carte2 .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carte2 .details .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.carte2 .details .content h3 {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1em;
+}
+.carte2 .details .content h3 span {
+  color: #e21212;
+  font-size: 0.8em;
+}
 /* ******************* FOOTER ******************** */
 footer {
   background-color: #bbaf8c;
@@ -236,4 +320,103 @@ input:hover {
 #icons a:hover {
   transform: scale(1.5);
   transition: 0.1s;
+}
+
+/******************** CARTES ***************/
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.wrapper .carte {
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.7);
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  background-color: #f4e0a6;
+  padding: 10px;
+  padding-top: 4px;
+}
+.carte {
+  position: relative;
+  /*width: 600px;*/
+  height: 450;
+  background: #122936;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.carte::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -10px;
+  width: 120%;
+  height: 100%;
+  background: #e28743;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+.carte:hover::before {
+  top: -60%;
+  transform: skewY(370deg);
+}
+.java.carte::after {
+  content: "Java";
+}
+.html.carte::after {
+  content: "Web";
+}
+.python.carte::after {
+  content: "Python";
+}
+.cpp.carte::after {
+  content: "C++";
+}
+.carte::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 8em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.carte .imgBx {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+.carte .imgBx img {
+  height: 150px;
+  transition: 0.5s;
+}
+.carte:hover .imgBx img {
+  height: 100px;
+}
+.carte .contentBx {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  top: 0%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  transition: 0.5s;
+}
+.carte:hover .contentBx {
+  top: 20%;
+  transition: 0.5s;
+}
+.carte .contentBx h4 {
+  text-align: center;
+  font-size: 18px;
+  margin: 15px;
 }
