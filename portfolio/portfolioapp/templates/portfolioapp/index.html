@@ -1,0 +1,89 @@
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Colin THOMAS : Portfolio</title>
+      <meta name = "description" content = "Portfolio des projets informatiques de THOMAS Colin">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+      {% load static %}
+      <link rel="stylesheet" type="text/css" href="{% static 'portfolioapp/style.css' %}">
+      <link rel="shortcut icon" type="image/png" href="{% static 'media/favicon.png' %}"/>
+      <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+      <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+      <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+      
+   </head>
+   <body>
+      <header>
+         <nav>
+            <ul>
+               <li id="logo"><a href="#">Colin</a></li>
+               <li><a href="#contact">Me contacter</a></li>
+               <li><a href="#projets">Mes projets informatiques</a></li>
+            </ul>
+         </nav>
+         <div id="imagePrincipale">
+            <h1>Page personnelle</h1>
+            <div id="premierTrait"></div>
+            <h3>Colin THOMAS</h3>
+         </div>
+      </header>
+      <div id="propos"></div>
+      <div class="projets" id="projets"></div>
+      <div class="divers">
+         <h2>En dehors de l'informatique...</h2>
+         <!-- <h3>Mes Renders Blender : </h3>
+            <a href="https://www.instagram.com/bad.blender/?hl=fr"><img src={% static "media/blender.ico" %} alt="Lien vers mes renders Blender" id="blender"></a> -->
+         <h3>Mes partitions de compos : </h3>
+         <a href="https://musescore.com/user/21039521"><img src={% static "media/musescore.png" %} alt="Lien vers mon musescore" id="musescore" width="85"></a>
+         <h3>Mes compos et reprises de musique : </h3>
+         <a href="https://soundcloud.com/colin-thomas-620797489"><img src={% static "media/soundcloud.png" %} alt="Lien vers mon Soundcloud" id="soundcloud"></a>
+      </div>
+      <footer id="footer">
+         <h2 id="contact">Me contacter</h2>
+         <h4 id="contact2">Laissez-moi un commentaire, une question, dites-moi quand vous êtes libres pour prendre un thé...</h4>
+         <form action="{% url 'portfolioapp:envoi' %}" method="post">
+            {% csrf_token %}
+            <table>
+               <tbody>
+                  <tr>
+                     <td><input name="comm" id="name" placeholder="Nom"></td>
+                     <td><input name="commmail" id="mail" placeholder="E-mail"></td>
+                  </tr>
+                  <tr>
+                     <td colspan=2> <input name="commaut" id="corps" placeholder="Votre message ici..."></td>
+                  </tr>
+                  <tr>
+                     <td colspan=2><input type="submit" value="Envoyer"></td>
+                  </tr>
+               </tbody>
+            </table>
+
+         </form>
+         {% if latest_comm_list %}
+         <ul>
+            {% for Commentaire in latest_comm_list %}
+            <li>
+               {{ Commentaire.auteur }}
+            </li>
+            <li>
+               {{ Commentaire.pub_date }}
+            </li>
+            <li style="padding-bottom:10px">
+               {{ Commentaire.commentaire_text }}
+            </li>
+            {% endfor %}
+         </ul>
+         {% else %}
+         <p>Aucun commentaire n'a été rédigé pour l'instant.</p>
+         {% endif %}
+         <div id="deuxiemeTrait"></div>
+         <div id="copyrightEtIcons">
+            <div id="copyright">
+               <span>© THOMASColin; 2021</span>
+            </div>
+         </div>
+      </footer>
+      
+      <script type="text/babel" src="{% static 'portfolioapp/test.js' %}"></script>
+      <script type="text/babel" src="{% static 'portfolioapp/propos.js' %}"></script>
+      <script type="text/babel" src="{% static 'portfolioapp/projets.js' %}"></script>
