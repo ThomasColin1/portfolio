@@ -39,7 +39,7 @@
         </div> */
 
 function TitreProjets(){
-    return(<h2>Mes projets informatiques</h2>)
+    return(<h2>Mes projets infomatiques</h2>)
 }
 
 function Wrapper(){
