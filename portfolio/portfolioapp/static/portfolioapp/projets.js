@@ -55,7 +55,7 @@ function ImgJava(){
 }
 
 function Java1(){
-    return (<h4>Mon projet de fi de seconde année : Id'Meal, <a href="https://github.com/ThomasColin1/Id-Meal">téléchargez le fichier ici</a></h4>)
+    return (<h4>Mon projet de fin de seconde année : Id'Meal, <a href="https://github.com/ThomasColin1/Id-Meal">téléchargez le fichier ici</a></h4>)
 }
 
 function Java2(){

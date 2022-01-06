@@ -9,7 +9,7 @@ function Musique(){
 
 function Partitions(){
     return(<div><h3>Mes partitions de compos : </h3>
-        <a href="https://musescore.com/user/21039521"><img src="/static/media/musescoretrans.png" alt="Lien vers mon musescore" id="musescore" width="85" style="background-color:transparent"/></a></div>
+        <a href="https://musescore.com/user/21039521"><img src="/static/media/musescoretrans.png" alt="Lien vers mon musescore" id="musescore" width="85"/></a></div>
     )
 }
 
