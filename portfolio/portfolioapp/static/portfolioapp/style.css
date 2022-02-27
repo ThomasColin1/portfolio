@@ -325,9 +325,12 @@ input:hover {
 /******************** CARTES ***************/
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .wrapper .carte {
@@ -366,6 +369,7 @@ input:hover {
 .java.carte::after {
   content: "Java";
 }
+
 .html.carte::after {
   content: "Web";
 }
@@ -374,6 +378,9 @@ input:hover {
 }
 .cpp.carte::after {
   content: "C++";
+}
+.vue.carte::after {
+  content: "Vue";
 }
 .carte::after {
   position: absolute;
@@ -419,4 +426,16 @@ input:hover {
   text-align: center;
   font-size: 18px;
   margin: 15px;
+}
+
+.java.carte{
+  grid-column:4/6
+}.cpp.carte{
+  grid-column:2/4
+}.python.carte{
+  grid-column:5/7
+}.vue.carte{
+  grid-column:1/3
+}.html.carte{
+  grid-column:3/5
 }

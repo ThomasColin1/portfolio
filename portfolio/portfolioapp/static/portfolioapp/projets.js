@@ -43,7 +43,31 @@ function TitreProjets(){
 }
 
 function Wrapper(){
-    return(<div class='Wrapper'><Java /><Html /><Python /><CPP /></div>)
+    return(<div class='Wrapper'><Vue /><Html /><Python /><CPP /><Java /></div>)
+}
+
+function Vue(){
+    return(<div class="vue carte"><ImgVue /><VueContent /></div>)
+}
+
+function ImgVue(){
+    return(<div class="imgBx"><img src='/static/media/vue.png' alt="Projets VueJS"/></div>)
+}
+
+function Vue1(){
+    return (<h4>Un Launchpad créé sous le framework Quasar, <a href="https://thomascolin1.github.io/LaunchpadPublish-V2/#/l">que vous pouvez essayer en ligne ici</a></h4>)
+}
+
+function Vue2(){
+    return(<h4></h4>)
+}
+
+function Vue3(){
+    return(<h4></h4>)
+}
+
+function VueContent(){
+    return(<div class="contentBx"><Vue1/><Vue2/><Vue3/></div>)
 }
 
 function Java(){
@@ -82,11 +106,11 @@ function ImgHtml(){
 }
 
 function Html1(){
-    return (<h4><a href="https://thomascolin1.github.io/SnakeJS/">Un snake en JS</a></h4>)
+    return(<h4><a href="https://dystorr.pythonanywhere.com/portfolioapp/">Ce portfolio avec React</a></h4>)
 }
 
 function Html2(){
-    return(<h4><a href="https://thomascolin1.github.io/portfolio">Ce portfolio avec React</a></h4>)
+    return (<h4><a href="https://ThomasColin1.github.io/SnakeJS">Un snake en JS</a></h4>)
 }
 
 function Html3(){
@@ -102,7 +126,7 @@ function ImgPy(){
 }
 
 function Py1(){
-    return (<h4><a href="https://thomascolin1.github.io/portfolio/">Ce portfolio avec Django</a></h4>)
+    return (<h4><a href="https://dystorr.pythonanywhere.com/portfolioapp/">Ce portfolio avec Django</a></h4>)
 }
 
 function Py2(){
@@ -126,7 +150,7 @@ function CPP1(){
 }
 
 function CPP2(){
-    return(<h4></h4>)
+    return(<h4>Un analyseur de logs Apache, créant un graphe de visualisation du traffic, <a href="https://github.com/ThomasColin1/Log-Analyzer-CPP">téléchargez les fichiers ici</a></h4>)
 }
 
 function CPP3(){
