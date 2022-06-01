@@ -27,7 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'dystorr.pythonanywhere.com',
-    'localhost'
+    'localhost',
+    
+
 ]
 
 

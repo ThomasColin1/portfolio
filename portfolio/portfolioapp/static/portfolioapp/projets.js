@@ -109,12 +109,12 @@ function Html1(){
     return(<h4><a href="https://dystorr.pythonanywhere.com/portfolioapp/">Ce portfolio avec React</a></h4>)
 }
 
-function Html2(){
-    return (<h4><a href="https://ThomasColin1.github.io/SnakeJS">Un snake en JS</a></h4>)
+function Html3(){
+    return (<h4></h4>)
 }
 
-function Html3(){
-    return(<h4></h4>)
+function Html2(){
+    return(<h4>Mon plus gros projet : Le site Web de l'association-festival étudiante <a href="https://undouadejazz.com">Un Doua De Jazz</a></h4>)
 }
 
 function Python(){
